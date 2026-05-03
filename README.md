@@ -10,6 +10,8 @@ A collection of modules for [VCV Rack](https://vcvrack.com/) by duddex.
 
 Implements **Tropical Additive Synthesis** based on the [paper by C. Bocci and G. Sancristoforo](https://www.giorgiosancristoforo.net/Tropical/paper.pdf). Instead of summing sinusoidal components like classical additive synthesis, this oscillator combines them using the **minimum** operator (tropical addition in min-plus algebra).
 
+For a deeper understanding of Tropical Additive Synthesis, watch this video: [Tropical Additive Synthesis on YouTube](https://www.youtube.com/watch?v=Va_NSRGceow).
+
 $$\text{trop}(x[n]) = \min\{ a_1 + \cos(\omega_1 n),\; a_2 + \cos(\omega_2 n),\; \ldots,\; a_5 + \cos(\omega_5 n) \}$$
 
 Five cosine oscillators are individually tuned, offset, and then combined by taking the minimum of all five signals at each sample. This produces complex, angular waveforms rich in harmonics that are fundamentally different from traditional additive synthesis.
