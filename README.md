@@ -71,6 +71,8 @@ Five jack inputs for voltage control of the tropical VCAs. The CV is scaled by 1
 | Knob | **DC** | DC offset added to the output (±1, scaled to ±5V) |
 | Output | **OUT** | Audio output (±5V, polyphonic) |
 
+The DC offset knob is useful because the tropical minimum waveform is inherently asymmetric. Taking the minimum of multiple cosines biases the result downward — the waveform spends more time near its negative peaks than a centered signal would. The exact DC bias depends on the combination of tropical VCA offsets and multiplier settings, and it shifts dynamically as you change those parameters. The DC knob lets you manually compensate for this, which matters for mixer headroom (centering the signal uses the full ±5V range symmetrically) and modulation behavior (a DC-biased signal fed into ring modulators or waveshapers gives different results compared to a zero-centered signal). It can also be used creatively to shift the signal into unipolar territory (0–10V) for driving CV inputs that expect positive voltages.
+
 #### Polyphony
 
 The module is fully polyphonic. The number of output channels matches the number of channels on the V/OCT input.
