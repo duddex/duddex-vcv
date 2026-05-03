@@ -2,7 +2,7 @@
 
 A collection of modules for [VCV Rack](https://vcvrack.com/) by duddex.
 
-**Note:** These modules were created as an experiment in how GitHub Copilot and LLMs can assist in software development. The code, panel layouts, and documentation were generated with significant LLM support using Claude Opus 4.6.
+**Note:** These modules were created as an experiment in how GitHub Copilot and LLMs can assist in software development. The entire workflow — from setting up the build environment (downloading and configuring MSYS2/MinGW and the Rack SDK), to writing module code, designing panel layouts, and authoring this very README — was done with significant LLM support using GitHub Copilot with Claude Opus 4.6.
 
 ## Modules
 
@@ -13,8 +13,6 @@ Implements **Tropical Additive Synthesis** based on the [paper by Cristiano Bocc
 $$\text{trop}(x[n]) = \min\{ a_1 + \cos(\omega_1 n),\; a_2 + \cos(\omega_2 n),\; \ldots,\; a_5 + \cos(\omega_5 n) \}$$
 
 Five cosine oscillators are individually tuned, offset, and then combined by taking the minimum of all five signals at each sample. This produces complex, angular waveforms rich in harmonics that are fundamentally different from traditional additive synthesis.
-
-For a deeper understanding of Tropical Additive Synthesis, watch this video: [Tropical Additive Synthesis on YouTube](https://www.youtube.com/watch?v=Va_NSRGceow).
 
 #### Pitch
 
@@ -77,6 +75,16 @@ The module is fully polyphonic. The number of output channels matches the number
 - Modulate the tropical VCAs with slow LFOs for animated spectral movement.
 - Set multipliers to odd integers only (1, 3, 5, 7, 9) for a hollow, clarinet-like quality.
 - Use subharmonic multipliers (< 1) combined with the fundamental for bass-heavy tones.
+
+
+#### Giorgio Sancristoforo's Software
+
+For a deeper understanding of Tropical Additive Synthesis, watch this video: [Tropical Additive Synthesis on YouTube](https://www.youtube.com/watch?v=Va_NSRGceow).
+
+If you find Tropical Additive Synthesis intriguing, take a closer look at [Giorgio Sancristoforo's website](https://www.giorgiosancristoforo.net/). Giorgio is an artist, sound designer, and software developer who creates unique standalone synthesizer applications for experimental music.
+
+His latest creation, **Homework**, is an experimental modular workstation built around a four-track cassette recorder with granular, reverb, echo, and saturation effects. It includes two modular synthesizers: **The Eye of Horus**, a west coast-style synth featuring two Tropical Additive Synthesis Oscillators, a Hybrid Putney Filter, and a double sequencer; and **Sonda**, a drone synthesizer inspired by Eliane Radigue with five multi-waveform oscillators and multi-mode filters. The whole system is interconnected through patch points on the recorder panel, creating a self-contained experimental echo-system with warm vintage sound.
+
 
 ### Blinkenlights
 
