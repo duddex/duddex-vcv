@@ -356,11 +356,11 @@ struct TropicalOscillatorWidget : ModuleWidget {
 		addChild(createLabelCentered(mm2px(Vec(col5, row5 - 6.f)), "OUT", 10.f, pink));
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(col5, row5)), module, TropicalOscillator::OUT_OUTPUT));
 
-		// Bottom row: DC, V/Oct
-		addChild(createLabelCentered(mm2px(Vec(col1, row5 - 6.f)), "DC", 10.f, grey));
-		addChild(createLabelCentered(mm2px(Vec(col2, row5 - 6.f)), "V/OCT", 10.f, grey));
-		addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(col1, row5)), module, TropicalOscillator::DC_PARAM));
-		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(col2, row5)), module, TropicalOscillator::VOCT_INPUT));
+		// Bottom row: V/Oct, DC
+		addChild(createLabelCentered(mm2px(Vec(col1, row5 - 6.f)), "V/OCT", 10.f, grey));
+		addChild(createLabelCentered(mm2px(Vec(col4, row5 - 6.f)), "DC", 10.f, grey));
+		addInput(createInputCentered<PJ301MPort>(mm2px(Vec(col1, row5)), module, TropicalOscillator::VOCT_INPUT));
+		addParam(createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(col4, row5)), module, TropicalOscillator::DC_PARAM));
 	}
 };
 

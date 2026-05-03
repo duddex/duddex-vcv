@@ -14,6 +14,8 @@ $$\text{trop}(x[n]) = \min\{ a_1 + \cos(\omega_1 n),\; a_2 + \cos(\omega_2 n),\;
 
 Five cosine oscillators are individually tuned, offset, and then combined by taking the minimum of all five signals at each sample. This produces complex, angular waveforms rich in harmonics that are fundamentally different from traditional additive synthesis.
 
+For a deeper understanding of Tropical Additive Synthesis, watch this video: [Tropical Additive Synthesis on YouTube](https://www.youtube.com/watch?v=Va_NSRGceow).
+
 #### Pitch
 
 | Control | Label | Range | Default | Description |
@@ -59,8 +61,8 @@ Five jack inputs for voltage control of the tropical VCAs. The CV is scaled by 1
 
 | Control | Label | Description |
 |---------|-------|-------------|
-| Knob | **DC** | DC offset added to the output (±1, scaled to ±5V) |
 | Input | **V/OCT** | 1V/octave pitch input (polyphonic) |
+| Knob | **DC** | DC offset added to the output (±1, scaled to ±5V) |
 | Output | **OUT** | Audio output (±5V, polyphonic) |
 
 #### Polyphony
@@ -78,8 +80,6 @@ The module is fully polyphonic. The number of output channels matches the number
 
 
 #### Giorgio Sancristoforo's Software
-
-For a deeper understanding of Tropical Additive Synthesis, watch this video: [Tropical Additive Synthesis on YouTube](https://www.youtube.com/watch?v=Va_NSRGceow).
 
 If you find Tropical Additive Synthesis intriguing, take a closer look at [Giorgio Sancristoforo's website](https://www.giorgiosancristoforo.net/). Giorgio is an artist, sound designer, and software developer who creates unique standalone synthesizer applications for experimental music.
 
