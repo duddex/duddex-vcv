@@ -80,8 +80,9 @@ The module is fully polyphonic. The number of output channels matches the number
 
 ### Blinkenlights
 
-A simple utility module with a blinking LED. A single knob controls the blink frequency from 0.1 Hz to 20 Hz (default 1 Hz). Useful for visual tempo reference or just for fun.
+A simple utility module with a blinking LED. A knob controls the blink frequency from 0.1 Hz to 20 Hz (default 1 Hz), and a button cycles the LED color through red, yellow, and green. Useful for visual tempo reference or just for fun.
 
-| Control | Range | Default | Description |
-|---------|-------|---------|-------------|
-| **FREQ** | 0.1 – 20 Hz | 1 Hz | Blink frequency |
+| Control | Type | Range | Default | Description |
+|---------|------|-------|---------|-------------|
+| **FREQ** | Knob | 0.1 – 20 Hz | 1 Hz | Blink frequency |
+| **COLOR** | Button | — | Red | Cycles LED color: red → yellow → green |
