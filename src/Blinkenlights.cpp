@@ -28,7 +28,7 @@ struct Blinkenlights : Module {
 
 	Blinkenlights() {
 		config(PARAMS_LEN, INPUTS_LEN, OUTPUTS_LEN, LIGHTS_LEN);
-		configParam(FREQ_PARAM, 0.1f, 20.f, 1.f, "Blink frequency", " Hz");
+		configParam(FREQ_PARAM, 0.1f, 5.f, 1.f, "Blink frequency", " Hz");
 		configButton(COLOR_PARAM, "Cycle color");
 	}
 
