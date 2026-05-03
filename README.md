@@ -4,6 +4,12 @@ A collection of modules for [VCV Rack](https://vcvrack.com/) by duddex.
 
 **Note:** These modules were created as an experiment in how GitHub Copilot and LLMs can assist in software development. The entire workflow — from setting up the build environment (downloading and configuring MSYS2/MinGW and the Rack SDK), to writing module code, designing panel layouts, and authoring this very README — was done with significant LLM support using GitHub Copilot with Claude Opus 4.6.
 
+## Table of Contents
+
+- [Modules](#modules)
+  - [Tropical Oscillator](#tropical-oscillator)
+  - [Blinkenlights](#blinkenlights)
+
 ## Modules
 
 ### Tropical Oscillator
