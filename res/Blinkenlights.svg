@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="20.32mm" height="128.5mm" viewBox="0 0 20.32 128.5">
+  <!-- 4HP module panel -->
+  <rect width="20.32" height="128.5" fill="#1a1a2e"/>
+  <rect x="0.5" y="0.5" width="19.32" height="127.5" fill="none" stroke="#0f3460" stroke-width="0.5"/>
+</svg>

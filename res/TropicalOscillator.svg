@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="76.2mm" height="128.5mm" viewBox="0 0 76.2 128.5">
+  <!-- 15HP module panel -->
+  <rect width="76.2" height="128.5" fill="#1a1a2e"/>
+  <rect x="0.5" y="0.5" width="75.2" height="127.5" fill="none" stroke="#0f3460" stroke-width="0.5"/>
+</svg>

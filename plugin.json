@@ -1,0 +1,29 @@
+{
+  "slug": "duddex",
+  "name": "duddex's Modules",
+  "version": "2.0.0",
+  "license": "GPL-3.0-or-later",
+  "brand": "duddex",
+  "author": "duddex",
+  "authorEmail": "duddex@outlook.com",
+  "authorUrl": "https://github.com/duddex",
+  "pluginUrl": "https://github.com/duddex/VCVRackModules",
+  "manualUrl": "https://github.com/duddex/VCVRackModules",
+  "sourceUrl": "https://github.com/duddex/VCVRackModules",
+  "donateUrl": "",
+  "changelogUrl": "",
+  "modules": [
+    {
+      "slug": "TropicalOscillator",
+      "name": "Tropical Oscillator",
+      "description": "Tropical Additive Synthesis oscillator based on min-plus algebra",
+      "tags": ["Oscillator", "Polyphonic"]
+    },
+    {
+      "slug": "Blinkenlights",
+      "name": "Blinkenlights",
+      "description": "A blinking LED with adjustable frequency",
+      "tags": ["Visual", "Utility"]
+    }
+  ]
+}
