@@ -1,7 +1,7 @@
 {
   "slug": "duddex",
   "name": "duddex's Modules",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "GPL-3.0-or-later",
   "brand": "duddex",
   "author": "duddex",
@@ -11,18 +11,24 @@
   "manualUrl": "https://github.com/duddex/VCVRackModules",
   "sourceUrl": "https://github.com/duddex/VCVRackModules",
   "donateUrl": "",
-  "changelogUrl": "",
+  "changelogUrl": "https://github.com/duddex/VCVRackModules/CHANGELOG.md",
   "modules": [
     {
       "slug": "TropicalOscillator",
       "name": "Tropical Oscillator",
-      "description": "Tropical Additive Synthesis oscillator based on min-plus algebra",
+      "description": "Polyphonic oscillator using tropical additive synthesis with harmonic multipliers, detune, and tropical VCAs",
       "tags": ["Oscillator", "Polyphonic"]
     },
     {
       "slug": "Blinkenlights",
       "name": "Blinkenlights",
-      "description": "A blinking LED with adjustable frequency",
+      "description": "Color-cycling blinker with four stacked RGB LED sizes (large to tiny)",
+      "tags": ["Visual", "Utility"]
+    },
+    {
+      "slug": "BlinkenlightsPlus",
+      "name": "Blinkenlights Plus",
+      "description": "Color-cycling blinker using a light bezel and light slider, with slider-controlled frequency",
       "tags": ["Visual", "Utility"]
     }
   ]

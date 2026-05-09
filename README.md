@@ -9,6 +9,7 @@ A collection of modules for [VCV Rack](https://vcvrack.com/) by duddex.
 - [Modules](#modules)
   - [Tropical Oscillator](#tropical-oscillator)
   - [Blinkenlights](#blinkenlights)
+  - [Blinkenlights Plus](#blinkenlights-plus)
 
 ## Modules
 
@@ -102,3 +103,18 @@ A simple utility module with a blinking LED. A knob controls the blink frequency
 |---------|------|-------|---------|-------------|
 | **FREQ** | Knob | 0.1 – 5 Hz | 1 Hz | Blink frequency |
 | **COLOR** | Button | — | Red | Cycles LED color: red → yellow → green |
+
+
+### Blinkenlights Plus
+
+An extended visual utility module that demonstrates illuminated Rack UI components. It blinks a **light bezel** and a **light slider** in sync. The slider controls blink frequency, and a color knob sweeps through a continuous RGB palette.
+
+| Control | Type | Range | Default | Description |
+|---------|------|-------|---------|-------------|
+| **COLOR** | Knob | 0 – 255 | 36.5 | Continuous RGB color control (left = black, right = white). Default maps to red. |
+| **BEZEL** | Light Bezel | — | — | Illuminated bezel element, blinking with the selected color. |
+| **FREQ** | Light Slider | 0.1 – 5 Hz | 2.55 Hz | Blink frequency control for both illuminated elements. |
+
+Color transitions follow this path:
+
+black → red → yellow → green → cyan → blue → magenta → white
