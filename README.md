@@ -19,6 +19,8 @@ Implements **Tropical Additive Synthesis** based on the [paper by Cristiano Bocc
 
 $$\text{trop}(x[n]) = \min\lbrace a_1 + \cos(\omega_1 n),\; a_2 + \cos(\omega_2 n),\; \ldots,\; a_5 + \cos(\omega_5 n) \rbrace$$
 
+![Tropical Oscillator module screenshot](images/tropical-oscillator.png)
+
 Five cosine oscillators are individually tuned, offset, and then combined by taking the minimum of all five signals at each sample. This produces complex, angular waveforms rich in harmonics that are fundamentally different from traditional additive synthesis.
 
 For a deeper understanding of Tropical Additive Synthesis, watch this video: [Tropical Additive Synthesis on YouTube](https://www.youtube.com/watch?v=Va_NSRGceow).
@@ -99,6 +101,8 @@ His latest creation, **Homework**, is an experimental modular workstation built 
 
 A simple utility module with a blinking LED. A knob controls the blink frequency from 0.1 Hz to 5 Hz (default 1 Hz), and a button cycles the LED color through red, yellow, and green. Useful for visual tempo reference or just for fun.
 
+![Blinkenlights module screenshot](images/blinkenlights.png)
+
 | Control | Type | Range | Default | Description |
 |---------|------|-------|---------|-------------|
 | **FREQ** | Knob | 0.1 – 5 Hz | 1 Hz | Blink frequency |
@@ -108,6 +112,8 @@ A simple utility module with a blinking LED. A knob controls the blink frequency
 ### Blinkenlights Plus
 
 An extended visual utility module that demonstrates illuminated Rack UI components. It blinks a **light bezel** and a **light slider** in sync. The slider controls blink frequency, and a color knob sweeps through a continuous RGB palette.
+
+![Blinkenlights Plus module screenshot](images/blinkenlights-plus.png)
 
 | Control | Type | Range | Default | Description |
 |---------|------|-------|---------|-------------|
