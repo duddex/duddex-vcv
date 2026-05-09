@@ -11,7 +11,7 @@
   "manualUrl": "https://github.com/duddex/VCVRackModules",
   "sourceUrl": "https://github.com/duddex/VCVRackModules",
   "donateUrl": "",
-  "changelogUrl": "https://github.com/duddex/VCVRackModules/CHANGELOG.md",
+  "changelogUrl": "https://github.com/duddex/VCVRackModules/blob/main/CHANGELOG.md",
   "modules": [
     {
       "slug": "TropicalOscillator",
