@@ -7,11 +7,11 @@
   "author": "duddex",
   "authorEmail": "duddex@outlook.com",
   "authorUrl": "https://github.com/duddex",
-  "pluginUrl": "https://github.com/duddex/VCVRackModules",
-  "manualUrl": "https://github.com/duddex/VCVRackModules",
-  "sourceUrl": "https://github.com/duddex/VCVRackModules",
+  "pluginUrl": "https://github.com/duddex/duddex-vcv",
+  "manualUrl": "https://github.com/duddex/duddex-vcv",
+  "sourceUrl": "https://github.com/duddex/duddex-vcv",
   "donateUrl": "",
-  "changelogUrl": "https://github.com/duddex/VCVRackModules/blob/main/CHANGELOG.md",
+  "changelogUrl": "https://github.com/duddex/duddex-vcv/blob/main/CHANGELOG.md",
   "modules": [
     {
       "slug": "TropicalOscillator",
