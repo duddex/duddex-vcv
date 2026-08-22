@@ -20,13 +20,13 @@
  */
 
 // Panel layout (millimetres) shared with res/DrumKit606.svg
-static const float TRIG_X = 20.f;
-static const float TUNE_X = 35.f, TUNE_CV_X = 45.f;
-static const float DECAY_X = 58.f, DECAY_CV_X = 68.f;
-static const float CHAR_X = 81.f, CHAR_CV_X = 91.f;
-static const float LEVEL_X = 108.f;
-static const float ROW_Y[7] = {38.f, 50.5f, 63.f, 75.5f, 88.f, 100.5f, 113.f};
-static const float OUT_X = 20.f, OUT_Y = 122.f;
+static const float TRIG_X = 22.f;
+static const float TUNE_X = 42.f, TUNE_CV_X = 55.f;
+static const float DECAY_X = 73.f, DECAY_CV_X = 86.f;
+static const float CHAR_X = 104.f, CHAR_CV_X = 117.f;
+static const float LEVEL_X = 138.f;
+static const float ROW_Y[7] = {23.f, 37.5f, 52.f, 66.5f, 81.f, 95.5f, 110.f};
+static const float OUT_X = 138.f, OUT_Y = 122.f;
 
 struct DrumKit606 : Module {
 	enum ParamId {
@@ -349,18 +349,17 @@ struct DrumKit606Widget : ModuleWidget {
 		NVGcolor grey = nvgRGB(0x8a, 0x8a, 0xa0);
 		NVGcolor light = nvgRGB(0xd0, 0xd0, 0xe0);
 
-		addChild(createDrumLabel(mm2px(Vec(60.96f, 8.5f)), "606 DRUMS", 13.f, pink));
-		addChild(createDrumLabel(mm2px(Vec(60.96f, 15.5f)), "duddex - synth drum voices", 6.f, grey));
+		addChild(createDrumLabel(mm2px(Vec(76.2f, 8.f)), "606 DRUMS", 12.f, pink));
 
 		// Column headers
-		addChild(createDrumLabel(mm2px(Vec(TRIG_X, 29.f)), "TRIG", 6.5f, grey));
-		addChild(createDrumLabel(mm2px(Vec(TUNE_X, 29.f)), "TUNE", 6.5f, grey));
-		addChild(createDrumLabel(mm2px(Vec(TUNE_CV_X, 29.f)), "CV", 6.5f, grey));
-		addChild(createDrumLabel(mm2px(Vec(DECAY_X, 29.f)), "DECAY", 6.5f, grey));
-		addChild(createDrumLabel(mm2px(Vec(DECAY_CV_X, 29.f)), "CV", 6.5f, grey));
-		addChild(createDrumLabel(mm2px(Vec(CHAR_X, 29.f)), "CHAR", 6.5f, grey));
-		addChild(createDrumLabel(mm2px(Vec(CHAR_CV_X, 29.f)), "CV", 6.5f, grey));
-		addChild(createDrumLabel(mm2px(Vec(LEVEL_X, 29.f)), "LEVEL", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(TRIG_X, 16.f)), "TRIG", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(TUNE_X, 16.f)), "TUNE", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(TUNE_CV_X, 16.f)), "CV", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(DECAY_X, 16.f)), "DECAY", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(DECAY_CV_X, 16.f)), "CV", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(CHAR_X, 16.f)), "CHAR", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(CHAR_CV_X, 16.f)), "CV", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(LEVEL_X, 16.f)), "LEVEL", 6.5f, grey));
 
 		// Voice row names (left aligned)
 		const char* voiceNames[7] = {"KICK", "SNARE", "CLAP", "C HAT", "O HAT", "L TOM", "H TOM"};
@@ -368,7 +367,7 @@ struct DrumKit606Widget : ModuleWidget {
 			addChild(createDrumLabel(mm2px(Vec(4.f, ROW_Y[r])), voiceNames[r], 9.f, light, true));
 
 		// Output label
-		addChild(createDrumLabel(mm2px(Vec(OUT_X + 8.f, OUT_Y)), "MIX OUT", 9.f, pink, true));
+		addChild(createDrumLabel(mm2px(Vec(OUT_X, 116.f)), "MIX OUT", 8.f, pink));
 	}
 };
 
