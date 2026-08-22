@@ -30,6 +30,12 @@
       "name": "Blinkenlights Plus",
       "description": "Color-cycling blinker using a light bezel and light slider, with slider-controlled frequency",
       "tags": ["Visual", "Utility"]
+    },
+    {
+      "slug": "DrumKit606",
+      "name": "606 Drums",
+      "description": "Seven-voice 606-inspired analog synth drum module (kick, snare, clap, closed/open hats, low/high toms) with trigger inputs, per-voice knobs and CV, and a mono mix output",
+      "tags": ["Drum", "Synth voice", "Polyphonic"]
     }
   ]
 }

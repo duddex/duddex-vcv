@@ -2,9 +2,12 @@
 RACK_DIR ?= ../..
 
 # FLAGS will be passed to both the C and C++ compiler
-FLAGS +=
+FLAGS += -I lib/606-Inspired-Synth-Drums/Source
 CFLAGS +=
 CXXFLAGS +=
+# The 606 drum DSP headers require C++14 (aggregates with default member
+# initializers). EXTRA_CXXFLAGS is appended after Rack's -std=c++11, so it wins.
+EXTRA_CXXFLAGS += -std=c++14
 
 # Careful about linking to shared libraries, since you can't assume much about the user's environment and library search path.
 # Static libraries are fine, but they should be added to this plugin's build system.

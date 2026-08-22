@@ -8,4 +8,5 @@ void init(Plugin* p) {
 	p->addModel(modelTropicalOscillator);
 	p->addModel(modelBlinkenlights);
 	p->addModel(modelBlinkenlightsPlus);
+	p->addModel(modelDrumKit606);
 }

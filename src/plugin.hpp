@@ -10,3 +10,4 @@ extern Plugin* pluginInstance;
 extern Model* modelTropicalOscillator;
 extern Model* modelBlinkenlights;
 extern Model* modelBlinkenlightsPlus;
+extern Model* modelDrumKit606;
