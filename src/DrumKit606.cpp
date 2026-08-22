@@ -244,6 +244,46 @@ struct DrumKit606 : Module {
 	}
 };
 
+// Panel text label (nanosvg does not render SVG <text>, so labels are drawn here)
+struct DrumLabel : widget::TransparentWidget {
+	std::string text;
+	float fontSize = 8.f;
+	NVGcolor color = nvgRGB(0xcc, 0xcc, 0xcc);
+	bool leftAlign = false;
+
+	void drawLayer(const DrawArgs& args, int layer) override {
+		if (layer != 1)
+			return;
+		nvgFontSize(args.vg, fontSize);
+		nvgFontFaceId(args.vg, APP->window->uiFont->handle);
+		if (leftAlign) {
+			nvgTextAlign(args.vg, NVG_ALIGN_LEFT | NVG_ALIGN_MIDDLE);
+			nvgFillColor(args.vg, color);
+			nvgText(args.vg, 0.f, box.size.y / 2.f, text.c_str(), NULL);
+		}
+		else {
+			nvgTextAlign(args.vg, NVG_ALIGN_CENTER | NVG_ALIGN_MIDDLE);
+			nvgFillColor(args.vg, color);
+			nvgText(args.vg, box.size.x / 2.f, box.size.y / 2.f, text.c_str(), NULL);
+		}
+		TransparentWidget::drawLayer(args, layer);
+	}
+};
+
+static DrumLabel* createDrumLabel(Vec pos, const char* text, float fontSize, NVGcolor color, bool leftAlign = false) {
+	DrumLabel* label = new DrumLabel;
+	label->box.size = Vec(60, fontSize + 4);
+	label->text = text;
+	label->fontSize = fontSize;
+	label->color = color;
+	label->leftAlign = leftAlign;
+	label->box.pos = pos;
+	label->box.pos.y -= label->box.size.y / 2.f;
+	if (!leftAlign)
+		label->box.pos.x -= label->box.size.x / 2.f;
+	return label;
+}
+
 struct DrumKit606Widget : ModuleWidget {
 	DrumKit606Widget(DrumKit606* module) {
 		setModule(module);
@@ -303,6 +343,32 @@ struct DrumKit606Widget : ModuleWidget {
 
 		// Main mix output
 		addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(OUT_X, OUT_Y)), module, DrumKit606::MIX_OUTPUT));
+
+		// Text labels (drawn in NanoVG; nanosvg ignores SVG <text>)
+		NVGcolor pink = nvgRGB(0xe9, 0x45, 0x60);
+		NVGcolor grey = nvgRGB(0x8a, 0x8a, 0xa0);
+		NVGcolor light = nvgRGB(0xd0, 0xd0, 0xe0);
+
+		addChild(createDrumLabel(mm2px(Vec(60.96f, 8.5f)), "606 DRUMS", 13.f, pink));
+		addChild(createDrumLabel(mm2px(Vec(60.96f, 15.5f)), "duddex - synth drum voices", 6.f, grey));
+
+		// Column headers
+		addChild(createDrumLabel(mm2px(Vec(TRIG_X, 29.f)), "TRIG", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(TUNE_X, 29.f)), "TUNE", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(TUNE_CV_X, 29.f)), "CV", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(DECAY_X, 29.f)), "DECAY", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(DECAY_CV_X, 29.f)), "CV", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(CHAR_X, 29.f)), "CHAR", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(CHAR_CV_X, 29.f)), "CV", 6.5f, grey));
+		addChild(createDrumLabel(mm2px(Vec(LEVEL_X, 29.f)), "LEVEL", 6.5f, grey));
+
+		// Voice row names (left aligned)
+		const char* voiceNames[7] = {"KICK", "SNARE", "CLAP", "C HAT", "O HAT", "L TOM", "H TOM"};
+		for (int r = 0; r < 7; r++)
+			addChild(createDrumLabel(mm2px(Vec(4.f, ROW_Y[r])), voiceNames[r], 9.f, light, true));
+
+		// Output label
+		addChild(createDrumLabel(mm2px(Vec(OUT_X + 8.f, OUT_Y)), "MIX OUT", 9.f, pink, true));
 	}
 };
 
