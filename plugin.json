@@ -7,10 +7,8 @@
   "author": "duddex",
   "authorEmail": "duddex@outlook.com",
   "authorUrl": "https://github.com/duddex",
-  "pluginUrl": "https://github.com/duddex/duddex-vcv",
-  "manualUrl": "https://github.com/duddex/duddex-vcv",
+  "manualUrl": "https://github.com/duddex/duddex-vcv/blob/main/README.md",
   "sourceUrl": "https://github.com/duddex/duddex-vcv",
-  "donateUrl": "",
   "changelogUrl": "https://github.com/duddex/duddex-vcv/blob/main/CHANGELOG.md",
   "modules": [
     {
@@ -35,7 +33,7 @@
       "slug": "DrumKit606",
       "name": "606 Drums",
       "description": "Seven-voice 606-inspired analog synth drum module (kick, snare, clap, closed/open hats, low/high toms) with trigger inputs, per-voice knobs and CV, and a mono mix output",
-      "tags": ["Drum", "Synth voice", "Polyphonic"]
+      "tags": ["Drum", "Synth voice"]
     }
   ]
 }

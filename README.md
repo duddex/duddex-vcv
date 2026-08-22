@@ -70,3 +70,11 @@ An extended visual utility module that demonstrates illuminated Rack UI componen
 Color transitions follow this path:
 
 black → red → yellow → green → cyan → blue → magenta → white
+
+## License
+
+- **Source code**: [GPL-3.0-or-later](LICENSE), © duddex.
+- **Panel graphics** (all SVG files in `res/`): [GPL-3.0-or-later](LICENSE), © duddex. You may reuse and modify them under the terms of that license.
+- **606 drum DSP** (`lib/606-Inspired-Synth-Drums`): MIT, © Matthew Fecher. See [LICENSE-606-Inspired-Synth-Drums.txt](LICENSE-606-Inspired-Synth-Drums.txt).
+
+The "duddex" name is not covered by these licenses; please don't use it to brand derivative plugins.
