@@ -48,7 +48,9 @@ The submodule provides header-only C++14 DSP, so this module is compiled with `-
 
 A stereo **shimmer reverb**. A plate-style reverb tank has a pitch shifter in its feedback loop. Each trip around the loop adds another pitch-shifted copy, so the tail slowly climbs (by default an octave at a time) and fades out at the top. This is the "swelling octaves" sound Brian Eno and Daniel Lanois created in the early 1980s with a pitch shifter feeding a hall reverb.
 
-The control set is modelled on popular shimmer pedals such as the Shimmer mode of the Strymon BigSky, but the algorithm is original. It isn't a clone, and this project isn't affiliated with Strymon.
+![Shimmer Reverb module screenshot](images/shimmer-reverb.png)
+
+The controls are designed for the characteristic swelling-octave shimmer effect, while the algorithm itself is original.
 
 How it works:
 
