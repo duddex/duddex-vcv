@@ -1,7 +1,7 @@
 {
   "slug": "duddex",
   "name": "duddex's Modules",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "license": "GPL-3.0-or-later",
   "brand": "duddex",
   "author": "duddex",
@@ -34,6 +34,12 @@
       "name": "606 Drums",
       "description": "Seven-voice 606-inspired analog synth drum module (kick, snare, clap, closed/open hats, low/high toms) with trigger inputs, per-voice knobs and CV, and a mono mix output",
       "tags": ["Drum", "Synth voice"]
+    },
+    {
+      "slug": "ShimmerReverb",
+      "name": "Shimmer Reverb",
+      "description": "Stereo shimmer reverb: plate-style allpass tank with a pitch shifter in the feedback loop, selectable intervals, infinite hold, and CV over every knob",
+      "tags": ["Reverb", "Effect", "Stereo"]
     }
   ]
 }

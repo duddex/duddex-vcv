@@ -9,6 +9,7 @@ A collection of modules for [VCV Rack](https://vcvrack.com/) by duddex.
 - [Modules](#modules)
   - [Tropical Oscillator](#tropical-oscillator)
   - [606 Drums](#606-drums)
+  - [Shimmer Reverb](#shimmer-reverb)
   - [Blinkenlights](#blinkenlights)
   - [Blinkenlights Plus](#blinkenlights-plus)
 
@@ -42,6 +43,34 @@ The submodule provides header-only C++14 DSP, so this module is compiled with `-
 | **CHAR** | Knob + CV | 0 – 100% | Character: Kick snap, Snare snappy, Clap noise/air (Kick, Snare, Clap only) |
 | **LEVEL** | Knob | 0 – 100% | Voice level into the mix |
 | **MIX OUT** | Audio output | — | Summed mono output of all voices |
+
+### Shimmer Reverb
+
+A stereo **shimmer reverb**. A plate-style reverb tank has a pitch shifter in its feedback loop. Each trip around the loop adds another pitch-shifted copy, so the tail slowly climbs (by default an octave at a time) and fades out at the top. This is the "swelling octaves" sound Brian Eno and Daniel Lanois created in the early 1980s with a pitch shifter feeding a hall reverb.
+
+The control set is modelled on popular shimmer pedals such as the Shimmer mode of the Strymon BigSky, but the algorithm is original. It isn't a clone, and this project isn't affiliated with Strymon.
+
+How it works:
+
+- The input is summed to mono, pre-delayed, and smeared by four input allpass diffusers.
+- The reverb tank is the "figure-eight" topology from Jon Dattorro's *Effect Design Part 1* (J. Audio Eng. Soc., 1997): two cross-coupled chains of modulated allpasses, delays, and damping filters, read through Dattorro's 7 output taps per side.
+- A two-voice delay-line pitch shifter sits in one of the tank's cross-feed paths. Its output is filtered by the Tone control and blended back into the loop with constant power, so the shimmer amount doesn't change the decay time.
+- **Hold** makes the tank lossless: decay goes to 100%, the input is muted, and damping, modulation and shimmer fade out. Whatever is in the reverb then rings indefinitely.
+
+| Control | Type | Range | Description |
+|---------|------|-------|-------------|
+| **DECAY** | Knob + CV | 0.4 – 40 s | Reverb time (RT60) |
+| **AMOUNT** | Knob + CV | 0 – 100% | How much pitch-shifted signal is fed back into the tank |
+| **MIX** | Knob + CV | 0 – 100% | Equal-power dry/wet balance |
+| **PRE-DLY** | Knob + CV | 0 – 500 ms | Delay before the reverb starts |
+| **TONE** | Knob + CV | 500 Hz – 18 kHz | Damping cutoff of the tank and the shimmer path (darker tone = fewer high layers) |
+| **MOD** | Knob + CV | 0 – 100% | Depth of the slow modulation of the tank allpasses (adds chorus and smooths metallic ringing) |
+| **PITCH** | Selector | 6 modes | Shimmer interval: +1 oct, +5th, +oct +5th, ±1 oct, +1 & +2 oct, −1 oct |
+| **HOLD** | Latch button + gate | — | Infinite hold, while the button is on or the gate is high |
+| **IN L / R** | Audio inputs | — | Stereo input; R is normalled to L for mono sources |
+| **OUT L / R** | Audio outputs | — | Stereo output |
+
+CV inputs add to their knob: 10 V covers the full knob range.
 
 ### Blinkenlights
 

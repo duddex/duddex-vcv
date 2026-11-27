@@ -9,4 +9,5 @@ void init(Plugin* p) {
 	p->addModel(modelBlinkenlights);
 	p->addModel(modelBlinkenlightsPlus);
 	p->addModel(modelDrumKit606);
+	p->addModel(modelShimmerReverb);
 }

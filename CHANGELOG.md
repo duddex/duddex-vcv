@@ -7,7 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Versioning note for VCV Rack: plugin versions follow `MAJOR.MINOR.REVISION`, and the `MAJOR` version should match the Rack major version targeted by the plugin. Since this plugin targets Rack 2, versioning starts at `2.x.x`.
 
-## [Unreleased]
+## [2.2.0] - 2026-11-27
+
+### Added
+
+- Introduced Shimmer Reverb, a stereo shimmer reverb: a Dattorro-style plate tank with a two-voice pitch shifter in its feedback loop, six pitch intervals, infinite hold (button and gate), and CV inputs for all six knobs.
 
 ## [2.1.0] - 2026-08-22
 
@@ -47,7 +51,8 @@ Versioning note for VCV Rack: plugin versions follow `MAJOR.MINOR.REVISION`, and
 - Introduced the Blinkenlights module.
 - Introduced the Tropical Oscillator module.
 
-[Unreleased]: https://github.com/duddex/duddex-vcv/compare/v2.1.0...HEAD
+[Unreleased]: https://github.com/duddex/duddex-vcv/compare/v2.2.0...HEAD
+[2.2.0]: https://github.com/duddex/duddex-vcv/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/duddex/duddex-vcv/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/duddex/duddex-vcv/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/duddex/duddex-vcv/releases/tag/v2.0.0

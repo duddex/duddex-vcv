@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="71.12mm" height="128.5mm" viewBox="0 0 71.12 128.5">
+  <!-- 14HP module panel. Text labels are drawn in code (nanosvg ignores SVG text). -->
+  <rect width="71.12" height="128.5" fill="#1a1a2e"/>
+  <rect x="0.5" y="0.5" width="70.12" height="127.5" fill="none" stroke="#0f3460" stroke-width="0.5"/>
+  <line x1="4" y1="16" x2="67.12" y2="16" stroke="#0f3460" stroke-width="0.4"/>
+  <line x1="4" y1="73.5" x2="67.12" y2="73.5" stroke="#0f3460" stroke-width="0.4"/>
+  <line x1="4" y1="103" x2="67.12" y2="103" stroke="#0f3460" stroke-width="0.4"/>
+  <!-- Pitch interval display -->
+  <rect x="24.56" y="81" width="22" height="8" rx="1" fill="#0b0b18" stroke="#0f3460" stroke-width="0.4"/>
+  <!-- Output area -->
+  <rect x="38.62" y="104.5" width="31" height="16" rx="1.5" fill="#0f3460"/>
+</svg>
